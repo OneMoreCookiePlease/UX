@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="font\Inter-VariableFont_slnt,wght.ttf" rel="stylesheet">
+    <title>O praci</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="top-block">
+            Súčasné možnosti<br> vektorizácie programov
+        </div>
+        <div class="menu">
+
+            <a href="frame1.html" class="menu-item">O práci</a>
+            <a href="frame2.html" class="menu-item">Vektorizácia</a>
+            <a href="frame3.html" class="menu-item selected">Nástroje na vektorizáciu</a>
+            <a href="frame5.html" class="menu-item">Pouzita literatura</a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="header">Nastroje na vektorizaciu » DIY</div>
+        <div class="divider"></div>
+        <div class="text-content">
+            <div class="header1">DYI</div>
+            <h3>Praktický príklad: C++</h3>
+            <p>Nasledujúci kód vykresľuje Mandelbrotov fraktál:</p>
+            <pre>
+                // na základe https://www.shadertoy.com/view/Mdy3Dw
+
+                float scale = 1 + cosf( t );
+                t+= 0,01 f;
+                for( int y = 0; y < SCRHEIGHT; y++ )
+                {
+                    float yoffs = ((float)y / SCRHEIGHT - 0,5f) * mierka;
+                    float xoffs = -0,5f * mierka, dx = mierka / SCRWIDTH;
+                    for( int x = 0; x < SCRWIDTH; x++, xoffs += dx )
+                    {
+                        float ox = 0, oy = 0, py;
+                        for( int i = 0; i < 99; i++ ) px = vôl, py = oy,
+                        oy = -(py * py - px * px - 0,55 f + xoffs),
+                        ox = -(px * py + py * px - 0,55 f + yoffs);
+                        int r = min(255, max(0, (int)(ox*255)));
+                        int g = min(255, max(0, (int)(oy*255)));
+                        screen->Plot( x, y, (r << 16) + (g << 8) );
+                    }
+                }</pre>
+
+            <p>
+                Všimnite si, že tento kód je celkom dobre optimalizovaný a veľmi náročný na výpočet. Mohli
+                by sme to ľahko spustiť kód na viacerých jadrách: medzi pixelmi nie sú žiadne závislosti, takže tento
+                algoritmus áno
+                trápne paralelné. Mali by sme to urobiť, ale pre optimálny výkon musíme tiež použiť
+                paralelizmus úrovne výučby. To znamená, že každá skalárna operácia by mala byť vykonaná pre
+                štyri vstupné prvky. Ťažké zdvíhanie sa deje vo vnútornej slučke, takže ak len optimalizujeme,
+                mali by sme to vidieť
+                slušné zrýchlenie. Zvážme naše možnosti: vo vnútornej slučke existuje závislosť na slučke,
+                takže my
+                nemôže spúšťať iterácie paralelne. Mohli by sme však spracovať štyri pixely paralelne.
+                Teraz preložíme existujúci skalárny kód krok za krokom na vektorizovaný kód. Budem používať
+                SSE, ale s
+                menšie úpravy rovnaký postup platí pre AVX
+
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

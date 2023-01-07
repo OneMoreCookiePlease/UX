@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="font\Inter-VariableFont_slnt,wght.ttf" rel="stylesheet">
+    <title>O praci</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="top-block">
+            Súčasné možnosti<br> vektorizácie programov
+        </div>
+        <div class="menu">
+
+            <a href="frame1.html" class="menu-item">O práci</a>
+            <a href="frame2.html" class="menu-item selected">Vektorizácia</a>
+            <div class="menu-item selected">&#9;Architektúra procesora</div>
+            <div class="menu-item selected">&#9;Vektory a hardvér</div>
+            <a href="frame3.html" class="menu-item">Nástroje na vektorizáciu</a>
+            <a href="frame5.html" class="menu-item">Pouzita literatura</a>
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="header">Vektorizácia - Architektúra procesora</div>
+        <div class="divider"></div>
+        <div class="text-content">
+            <div class="header1"><b>Architektúra procesora</b></div>
+            <div>
+                <p> Architektúra procesoraFlynn rozlišuje 4 typy počítačovýh architektur[3]:</p>
+                <ul>
+                    <li>SISD - Single instuction, single data</li>
+                    <li>SIMD - Single instuction, multiple data</li>
+                    <li>MISD - Multiple instuctions, single data</li>
+                    <li>MIMD - Multiple instuctions, multiple data</li>
+                </ul>
+                <h3>SISD</h3>
+                <p> SISD je počítačová architektúra, v ktorej jeden jednojadrový procesor vykonávajeden tok inštrukcií,
+                    aby pracoval s údajmi uloženými v jedinej pamäti. To zodpovedá von Neumannovej architektúre.</p>
+                <h3>SIMD</h3>
+                <p> Stroje SIMD využívajú paralelizmus na úrovni údajov, ale nie súbežnosť: existujúsimultánne
+                    (paralelné) výpočty, ale každá jednotka vykonáva presne tú istú in-štrukciu v každom danom okamihu
+                    (len s inými údajmi). Väčšina modernýchnávrhov CPU obsahuje inštrukcie SIMD na zlepšenie výkonu
+                    multimediálnehopoužívania[4].</p>
+                <h3>MISD</h3>
+                <p> MISD je typ paralelnej výpočtovej architektúry, kde mnoho funkčných jednotiekvykonáva rôzne operácie
+                    s rovnakými údajmi. Odolnosť voči chybám vykonáva-ním rovnakých inštrukcií redundantne s cieľom
+                    odhaliť a maskovať chyby, spôso-bom známym ako replikácia úloh, možno považovať za patriacu do tohto
+                    typu.Aplikácie pre túto architektúru sú oveľa menej bežné ako MIMD a SIMD, pre-tože posledné dve sú
+                    často vhodnejšie pre bežné dátové paralelné techniky. Kon-krétne umožňujú lepšie škálovanie a
+                    využitie výpočtových zdrojov[5].</p>
+                <h3>MIMD</h3>
+                <p> Stroje MIMD majú viacero procesorov, ktoré pracujú asynchrónne a nezávisle.V každom danom čase môžu
+                    rôzne procesory vykonávať rôzne inštrukcie narôznych častiach údajov. Architektúry MIMD je možné
+                    použiť v mnohých ob-lastiach, ako je napríklad počítačom podporovaný dizajn/počítačom podporo-vaná
+                    výroba, modelovanie a komunikačné prepínače. Stroje MIMD môžu byť buďzdieľaná pamäť, alebo
+                    distribuovanej pamäť. Táto klasifikácia je založená na tom,ako procesory MIMD pristupujú k pamäti.
+                    Táto trieda predpokladá, že vo vý-počtovom systéme existuje niekoľko zariadení na spracovanie
+                    príkazov, ktoré súspojené do jedného komplexu a každé pracuje s vlastným príkazom a
+                    dátovýmtokom.Spracovanie je rozdelené do viacerých vlákien, z ktorých každé má svoj
+                    vlastnýhardvérový stav procesora, v rámci jedného softvérovo definovaného procesualebo naprieč
+                    viacerými procesmi. Pretože systém má viacero vlákien čakajúcichna vykonanie (systémové alebo
+                    užívateľské vlákna), táto architektúra efektívnevyužíva hardvérové prostriedky[6].</p>
+            </div>
+        </div>
+        <div class="button-holder">
+            <a class="link" href="frame3.html">
+                <div class="next-unit"> Nastroje na vektorizaciu</div>
+                <img class="arrow" src="arrow.png">
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
